@@ -29,14 +29,17 @@ app.use(express.json());
 app.use(methodOverride(`_method`));
 
 ////// ***routes*** //////
-app.get(`/seed`, (req, res) => {
-  Game.create(gameSeed, (err, resetGame) => {
-    res.redirect(`/`)
-  })
-})
+// app.get(`/seed`, (req, res) => {
+//   Game.create(gameSeed, (err, resetGames) => {
+//     console.log(resetGames);
+//     console.log(err);
+//     res.redirect(`/`)
+//   })
+// })
 ////// ***index*** //////
 app.get(`/`, (req, res) => {
   Game.find({}, (err, allGames) => {
+
     res.render(`index.ejs`, {
       games: allGames
     });

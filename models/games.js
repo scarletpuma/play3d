@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 const gameSchema = new mongoose.Schema({
-  title: {type: 'string'},
-  genre: {type: 'string'},
-  releaseDate: {type: 'string'},
-  company: {type: 'string'},
-  msrbRating: {type: 'string'},
-  description: {type: 'string'},
-  tags: {type: 'string'},
-  buyLink: {type: 'string'},
-  image: {type: 'string'}
+  title: {type: String},
+  genre: [{type: String}],
+  releaseDate: {type: String},
+  company: {type: String},
+  msrbRating: {type: String},
+  description: {type: String},
+  tags: [{type: String}],
+  buyLink: {type: String},
+  image: {type: String}
 })
 
 const gameCollection = mongoose.model(`Game`, gameSchema);

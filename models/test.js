@@ -1,0 +1,165 @@
+module.exports = [{
+  title: "Song of Farca",
+  genre: ["Simulation", "Adventure", "Mystery"],
+  releaseDate: "July 21, 2021",
+  developer: "Wooden Monkeys",
+  description: "Hack into crime scenes, look for evidence, analyze data, interrogate criminals, track suspects and deal with the consequences of your decisions. This is a dark and brutal detective story with a Black Mirror-esque atmosphere of digital dominance and the narrative structure of a US crime procedural.",
+  tags: ["LGBTQ", "Dystopia", "Crime", "Cyberpunk", "Single Player", "Choices Matter"],
+  buyLink: "https://store.steampowered.com/app/1435670/Song_of_Farca/",
+  image: "https://cdn1.epicgames.com/spt/9dcb57c3-e7cc-4468-b748-c341b317ff77/song-of-farca-offer-53e586a3.png"
+},
+{
+  title: "Stardew Valley",
+  genre: ["Simulation", "RPG"],
+  releaseDate: "February 26, 2016",
+  developer: "Concerned Ape",
+  msrbRating: "E",
+  description: "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+  tags: ["Single Player", "Multi Player", "Farming Sim", "Pixel Graphics", "Sandbox", "Fishing"],
+  buyLink: "https://store.steampowered.com/app/413150/Stardew_Valley/",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hs3BfCAoVMuu9BLU_mvQCwm8DqS33e8LRyClGfCK7bQqau3Hh9PvoBV-1doEjV8zri4&usqp=CAU"
+},
+{
+  title: "LA Noire",
+  genre: ["Adventure", "Strategy"],
+  releaseDate: "November 8, 2011",
+  developer: "Rockstar Games",
+  msrbRating: "M",
+  description: "L.A. Noire is a violent crime thriller that blends breathtaking action with true detective work to deliver an unprecedented interactive experience. This complete edition of L.A. Noire includes the complete original game and all previously released downloadable content.",
+  tags: ["Single Player", "Crime", "Noir"],
+  buyLink: "https://store.steampowered.com/app/110800/LA_Noire/",
+  image: "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA09172_00/3/i_4e484f183c1e8aaad6bc80b05e40b634ae09651dfcb1c378f170bd8a2d7e6770/i/icon0.png"
+},
+{
+  title: "Subnautica",
+  genre: ["Adventure", "Horror"],
+  releaseDate: "January 23, 2018",
+  developer: "Unknown Worlds Entertainment",
+  msrbRating: "E",
+  description: "Descend into the depths of an alien underwater world filled with wonder and peril. Craft equipment, pilot submarines and out-smart wildlife to explore lush coral reefs, volcanoes, cave systems, and more - all while trying to survive.",
+  tags: ["Single Player", "Survival", "Open World", "Sci-Fi"],
+  buyLink: "https://store.steampowered.com/app/264710/Subnautica/",
+  image: "https://cdn.akamai.steamstatic.com/steam/apps/264710/capsule_616x353.jpg?t=1634241829"
+},
+{
+  title: "Fallout 4",
+  genre: ["RPG"],
+  releaseDate: "November 10, 2018",
+  developer: "Bethesda",
+  msrbRating: "M",
+  description: "Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever, and the next generation of open-world gaming.",
+  tags: ["Single Player", "Open World", "Dystopia", "Shooter", "Choices Matter"],
+  buyLink: "https://store.steampowered.com/app/377160/Fallout_4/",
+  image: "https://upload.wikimedia.org/wikipedia/en/7/70/Fallout_4_cover_art.jpg"
+},
+{
+  title: "Saints Row: The Third",
+  genre: ["Action"],
+  releaseDate: "November 15, 2011",
+  developer: "Volition",
+  msrbRating: "M",
+  description: "Get ready for the most out-landish gameplay scenarios ever seen as the Third Street Saints take on the Syndicate!",
+  tags: ["Single Player", "Sandbox", "Shooter", "Comedy"],
+  buyLink: "https://store.steampowered.com/app/55230/Saints_Row_The_Third/",
+  image: "https://cdn1.epicgames.com/3928fd8975b2437d894bbc5cd21de9a0/offer/SRTT_Tall-512x682-83e0de7dcccfbfdaa10f5fee5d2f1242.jpg"
+},
+{
+  title: "Animal Crossing: New Horizons",
+  genre: ["Simulation"],
+  releaseDate: "March 20, 2020",
+  developer: "Nintendo",
+  msrbRating: "E",
+  description: "Escape to a deserted island and create your own paradise as you explore, create, and customize in the Animal Crossing: New Horizons game. Your island getaway has a wealth of natural resources that can be used to craft everything from tools to creature comforts. You can hunt down insects at the crack of dawn, decorate your paradise throughout the day, or enjoy sunset on the beach while fishing in the ocean. The time of day and season match real life, so each day on your island is a chance to check in and find new surprises all year round.",
+  tags: ["Single Player", "Multi Player", "Open World", "Farming Simulator", "Fishing"],
+  buyLink: "https://www.animal-crossing.com/new-horizons/",
+  image: "https://cdn.cdkeys.com/700x700/media/catalog/product/f/i/fifa-22-pc-game-origin-cover_14_.jpg"
+},
+{
+  title: "We Happy Few",
+  genre: ["Action", "Adventure"],
+  releaseDate: "August 10, 2018",
+  developer: "Compulsion Games",
+  msrbRating: "M",
+  description: "From the independent studio that brought you Contrast, We Happy Few is an action/adventure game set in a drug-fuelled, retrofuturistic city in an alternative 1960s England. Hide, fight and conform your way out of this delusional, Joy-obsessed world.",
+  tags: ["Single Player", "Dystopia", "Open World", "Horror", "Choices Matter", "Steampunk"],
+  buyLink: "https://store.steampowered.com/app/320240/We_Happy_Few/",
+  image: "https://cdn.akamai.steamstatic.com/steam/apps/320240/capsule_616x353.jpg?t=1575388728"
+},
+{
+  title: "Bioshock Infinite",
+  genre: ["Action"],
+  releaseDate: "March 25, 2013",
+  developer: "Irrational Games",
+  msrbRating: "M",
+  description: "Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.",
+  tags: ["Single Player", "Open World", "Shooter", "Steampunk", "Dystopia", "Sci-Fi"],
+  buyLink: "https://store.steampowered.com/app/8870/BioShock_Infinite/",
+  image: "https://image.api.playstation.com/vulcan/img/cfn/11307bShMfu86rAKUggseU2hoLu5Hcmx-oJU22cKxxQ6a6_gMaAvZA-ttFZ7HPvUbZVVCiNo6dIOIk5WBIxYzKPcm2gvhZbT.png"
+},
+{
+  title: "Pokemon Legends: Arceus",
+  genre: ["Adventure", "RPG"],
+  releaseDate: "January 28, 2022",
+  developer: "Game Freak",
+  msrbRating: "E",
+  description: "Get ready for a new kind of grand, Pokémon adventure in Pokémon Legends: Arceus, a new game from Game Freak that blends action and exploration with the RPG roots of the Pokémon series.",
+  tags: ["Single Player", "Open World"],
+  buyLink: "https://www.nintendo.com/games/detail/pokemon-legends-arceus-switch/",
+  image: "https://assets-prd.ignimgs.com/2021/11/04/pokmon-legends-arceus-button-fomn-1636006738698.jpg"
+},
+{
+  title: "Lego Harry Potter",
+  genre: ["Adventure"],
+  releaseDate: "October 30, 2018",
+  developer: "TT Games",
+  msrbRating: "E",
+  description: "The LEGO Harry Potter™ Collection brings LEGO Harry Potter™: Years 1-4 and LEGO Harry Potter™: Years 5-7 remastered! This compilation unites the creative prowess of LEGO and the expansive world of Harry Potter, with an exciting journey full of spell-casting, potion-making, puzzle-solving, lessons, dueling and much more for players of all ages to enjoy.",
+  tags: ["Single Player", "Open World", "Multi Player", "Comedy"],
+  buyLink: "https://www.nintendo.com/games/detail/lego-harry-potter-collection-switch/",
+  image: "https://upload.wikimedia.org/wikipedia/en/9/96/Lego_potter_cover.jpg"
+},
+{
+  title: "Minecraft",
+  genre: ["Adventure"],
+  releaseDate: "November 18, 2011",
+  developer: "Mojang Studios",
+  msrbRating: "E",
+  description: "Players explore a blocky, procedurally generated 3D world with virtually infinite terrain, and may discover and extract raw materials, craft tools and items, and build structures, earthworks and simple machines. Depending on game mode, players can fight computer-controlled mobs, as well as cooperate with or compete against other players in the same world. Game modes include a survival mode, in which players must acquire resources to build the world and maintain health, and a creative mode, where players have unlimited resources and access to flight.",
+  tags: ["Single Player", "Open World", "Multi Player", "Survival"],
+  buyLink: "https://www.minecraft.net/en-us",
+  image: "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png"
+},
+{
+  title: "Valorant",
+  genre: ["First Person Shooter"],
+  releaseDate: "June 2, 2020",
+  developer: "Riot Games",
+  msrbRating: "T",
+  description: "Blend your style and experience on a global, competitive stage. You have 13 rounds to attack and defend your side using sharp gunplay and tactical abilities. And, with one life per-round, you'll need to think faster than your opponent if you want to survive. Take on foes across Competitive and Unranked modes as well as Deathmatch and Spike Rush.",
+  tags: ["Multi Player", "Shooter", "Competitive"],
+  buyLink: "https://playvalorant.com/en-us/",
+  image: "https://cdn.vox-cdn.com/thumbor/rBYEFU3kgBZVE2FGj72oPaMRbXk=/0x0:5600x3150/1200x800/filters:focal(2264x499:3160x1395)/cdn.vox-cdn.com/uploads/chorus_image/image/66653777/LogoVersion_Beta_Key_Art_VALORANT.0.jpg"
+},
+{
+  title: "Dead By Daylight",
+  genre: ["Action"],
+  releaseDate: "June 14, 2016",
+  developer: "Behavior Interactive Inc.",
+  msrbRating: "M",
+  description: "Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape the Killer and avoid being caught and killed.",
+  tags: ["Multi Player", "Competitive", "Strategy", "Horror", "Survival"],
+  buyLink: "https://store.steampowered.com/app/381210/Dead_by_Daylight/",
+  image: "https://cdn.akamai.steamstatic.com/steam/apps/381210/capsule_616x353.jpg?t=1644337601"
+},
+{
+  title: "Monster Prom",
+  genre: ["Simulation"],
+  releaseDate: "April 27, 2018",
+  developer: "Beautiful Glitch",
+  msrbRating: "M",
+  description: "You have 3 weeks to get a date for Monster Prom! Go through absurd and funny situations, raise your stats and seduce one of your classmates. Beautiful art, bold, unapologetic dialogue and hard choices make up this Multiplayer (1-4 players) Dating Sim. Be your worst self.",
+  tags: ["Multi Player", "Dating Sim", "Comedy", "Choices Matter", "LGBTQ", "Fantasy"],
+  buyLink: "https://store.steampowered.com/app/743450/Monster_Prom/",
+  image: "https://images.gog-statics.com/136218665de33cf9ec4e11c92c58f7431e9d017cc44cc21e033c2fcc3719eb14_product_card_v2_mobile_slider_639.jpg"
+}
+]

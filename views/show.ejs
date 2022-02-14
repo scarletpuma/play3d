@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <%- include('partials/head') %>
+  <%- include("partials/head.ejs") %>
+  <%- include("partials/nav.ejs") %>
   <body>
-    <h1><%=game.title%></h1>
+    <div class="showbody">
+      <h1><a href="<%=game.buyLink%>"><%=game.title%></a></h1>
+      <img class="gameimg"src="<%=game.image%>">
+      <div class="gamedesc">
+        <%=game.description%>
+      </div>
+        <div class="gamedetails">
+          <ul>
+            <li>genre: <%=game.genre%></li>
+            <li>release date: <%=game.releaseDate%></li>
+            <li>developer: <%=game.developer%></li>
+            <li>MSRB rating: <%=game.msrbRating%></li>
+          </ul>
+          <p class="tags"><%=game.tags%></p>
+        </div>
+      </div>
   </body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include('partials/head') %>
+  <body>
+    <nav class="dropdownnav">
+      <label for="touch"><span class="droptitle">game title</span></label>
+      <input type="checkbox" id="touch">
+      <ul class="slide">
+        <% for(let i = 0; i < games.length; i++) { %>
+          <li class="gameTitle"><input type="radio" name="videogametitle" value="<%=games[i].title%>"><%=games[i].title%></li>
+          <%}%>
+      </ul>
+      </nav>
+      <div class="newpostform">
+        <h1 class="titleDisplay"><%= displayTitle()%></h1>
+      </div>
+  </body>
+</html>

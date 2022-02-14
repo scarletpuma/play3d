@@ -1,5 +1,4 @@
 ////// ***Dependencies*** //////
-
 const express = require(`express`);
 const methodOverride  = require(`method-override`);
 const mongoose = require (`mongoose`);
@@ -36,10 +35,10 @@ app.use(methodOverride(`_method`));
 //     res.redirect(`/`)
 //   })
 // })
+
 ////// ***index*** //////
 app.get(`/`, (req, res) => {
   Game.find({}, (err, allGames) => {
-
     res.render(`index.ejs`, {
       games: allGames
     });
@@ -47,6 +46,21 @@ app.get(`/`, (req, res) => {
 });
 
 ////// ***post*** //////
+app.get(`/newpost`, (req, res) => {
+  Game.find({}, (err, allGames) => {
+    res.render(`post.ejs`, {
+      games: allGames
+    });
+  });
+});
+////// ***discover*** //////
+app.get(`/discover`, (req, res) => {
+  Game.find({}, (err, allGames) => {
+    res.render(`discover.ejs`, {
+      games: allGames
+    });
+  });
+});
 ////// ***show*** //////
 
 app.get(`/games/:id`, (req, res) => {

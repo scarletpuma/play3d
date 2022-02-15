@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <%- include('partials/head') %>
+  <html lang="en" dir="ltr">
+  <%- include("partials/head.ejs") %>
+  <%- include("partials/nav.ejs") %>
   <body>
-    <nav class="dropdownnav">
-      <label for="touch"><span class="droptitle">game title</span></label>
-      <input type="checkbox" id="touch">
-      <ul class="slide">
-        <% for(let i = 0; i < games.length; i++) { %>
-          <li class="gameTitle"><input type="radio" name="videogametitle" value="<%=games[i].title%>"><%=games[i].title%></li>
-          <%}%>
-      </ul>
-      </nav>
-      <div class="newpostform">
-        <h1 class="titleDisplay"><%= displayTitle()%></h1>
-      </div>
+    <div class="newpostform">
+      <form action="/" method="POST">
+        <nav class="dropdownnav">
+          <label for="touch">
+            <span class="droptitle">game title</span>
+          </label>
+          <input type="checkbox" id="touch">
+            <ul class="slide">
+              <% for(let i = 0; i < games.length; i++) { %>
+                <li class="gameTitle">
+                  <input type="radio" name="videoGameTitle" value="<%=games[i].title%>"><%=games[i].title%>
+                </li>
+            <%}%>
+            </ul>
+        </nav>
+        <div class="rate">
+          <input type="radio" id="star5" name="rate" value="5" />
+          <label for="star5" title="text">5 stars</label>
+          <input type="radio" id="star4" name="rate" value="4" />
+          <label for="star4" title="text">4 stars</label>
+          <input type="radio" id="star3" name="rate" value="3" />
+          <label for="star3" title="text">3 stars</label>
+          <input type="radio" id="star2" name="rate" value="2" />
+          <label for="star2" title="text">2 stars</label>
+          <input type="radio" id="star1" name="rate" value="1" />
+          <label for="star1" title="text">1 star</label>
+        </div>
+        Your review: <textarea class="reviewinput" rows:"5" cols="33" name="review"></textarea>
+        <input type="submit" value="Post Review">
+      </form>
+    </div>
   </body>
 </html>

@@ -7,6 +7,7 @@ const db = mongoose.connection;
 require(`dotenv`).config();
 const Game = require(`./models/games.js`);
 const gameSeed = require(`./models/test.js`);
+const Review = require(`./models/reviews.js`);
 
 ////// ***port*** //////
 const PORT = process.env.PORT || 3003;
@@ -38,6 +39,14 @@ app.use(methodOverride(`_method`));
 
 ////// ***index*** //////
 app.get(`/`, (req, res) => {
+  Review.find({}, (err, allReviews) => {
+    res.render(`index.ejs`, {
+      reviews: allReviews
+    });
+  });
+});
+
+app.get(`/`, (req, res) => {
   Game.find({}, (err, allGames) => {
     res.render(`index.ejs`, {
       games: allGames
@@ -53,6 +62,13 @@ app.get(`/newpost`, (req, res) => {
     });
   });
 });
+
+app.post('/newpost', (req, res) => {
+    Review.create(req.body, (err, createdReview) => {
+      res.redirect(`/`)
+    });
+});
+
 ////// ***discover*** //////
 app.get(`/discover`, (req, res) => {
   Game.find({}, (err, allGames) => {

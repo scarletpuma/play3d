@@ -54,6 +54,26 @@ app.get(`/`, (req, res) => {
   });
 });
 
+////// ***edit*** //////
+//darwood saved my life here
+app.get(`/:id/edit`, (req, res) => {
+    Review.findById(req.params.id, (err, foundReview) => {
+        Game.find({}, (err, allGames) => {
+            res.render(`edit.ejs`, {
+              games: allGames,
+              reviews:foundReview
+            });
+        });
+    });
+});
+
+app.put(`/:id`, (req, res) => {
+  Review.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
+    res.redirect(`/`)
+  });
+});
+
+
 ////// ***post*** //////
 app.get(`/newpost`, (req, res) => {
   Game.find({}, (err, allGames) => {
@@ -63,7 +83,8 @@ app.get(`/newpost`, (req, res) => {
   });
 });
 
-app.post('/newpost', (req, res) => {
+app.post('/', (req, res) => {
+  console.log(`hello`);
     Review.create(req.body, (err, createdReview) => {
       res.redirect(`/`)
     });
@@ -77,13 +98,20 @@ app.get(`/discover`, (req, res) => {
     });
   });
 });
-////// ***show*** //////
 
+////// ***show*** //////
 app.get(`/games/:id`, (req, res) => {
   Game.findById(req.params.id, (err, foundGame) => {
     res.render(`show.ejs`, {
       game: foundGame
     });
+  });
+});
+
+////// ***delete*** //////
+app.delete(`/games/:id`, (req, res) => {
+  Review.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect(`/`)
   });
 });
 

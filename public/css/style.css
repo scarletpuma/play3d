@@ -72,7 +72,6 @@ body {
   display: block;
   padding: 12px 24px;
   color: #5BC0BE;
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
@@ -97,6 +96,7 @@ body {
 .header h1 {
   padding: 3em;
 }
+
 /*DISCOVER*/
 .griddiv {
   display: flex;
@@ -251,9 +251,22 @@ body {
   display: flex;
   flex-direction: column;
   width: 80%;
-  align-items: center;
+  align-self: center;
+  background-color:#191718;
+  color: #5BC0BE;
+  padding: 1em;
+  margin: 1em;
+  align-items: space-between;
+  font-family: 'Questrial', sans-serif;
 }
-
+.btns {
+  margin: 1em;
+}
+.reviewpost h1 {
+  color: #ECA72C;
+  font-family: 'Odibee Sans', cursive;
+  text-shadow: #474747 3px 5px 2px;
+}
 /* CSS */
 .btn {
   align-items: center;
@@ -268,8 +281,9 @@ body {
   display: inline-flex;
   flex-direction: column;
   font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 18px;
-  height: 52px;
+  font-size: 10px;
+  height: 30px;
+  width: 50px;
   justify-content: center;
   line-height: 1;
   margin: 0;
@@ -301,4 +315,8 @@ body {
   .btn {
     height: 48px;
   }
+}
+.homefeed {
+  display: flex;
+  flex-direction: column;
 }

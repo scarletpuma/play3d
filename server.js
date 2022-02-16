@@ -40,17 +40,12 @@ app.use(methodOverride(`_method`));
 ////// ***index*** //////
 app.get(`/`, (req, res) => {
   Review.find({}, (err, allReviews) => {
-    res.render(`index.ejs`, {
-      reviews: allReviews
-    });
-  });
-});
-
-app.get(`/`, (req, res) => {
-  Game.find({}, (err, allGames) => {
-    res.render(`index.ejs`, {
-      games: allGames
-    });
+      Game.find({}, (err, allGames) => {
+          res.render(`index.ejs`, {
+            games: allGames,
+            reviews: allReviews
+          });
+      });
   });
 });
 
@@ -61,7 +56,7 @@ app.get(`/:id/edit`, (req, res) => {
         Game.find({}, (err, allGames) => {
             res.render(`edit.ejs`, {
               games: allGames,
-              reviews:foundReview
+              review: foundReview
             });
         });
     });

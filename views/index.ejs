@@ -6,12 +6,16 @@
     <% for(let i = 0; i < reviews.length; i++) { %>
       <div class="reviewpost">
         <%=reviews[i].videoGameTitle%>
-        <%=reviews[i].rate%>
+        <%=reviews[i].rate%><span class="material-icons-outlined">
+star_rate
+</span>s
         <%=reviews[i].review%>
         <form action="/games/<%=reviews[i].id; %>?_method=DELETE" method="POST">
-          <input type="submit" value="delete post">
+          <input class="btn" type="submit" value="delete post">
         </form>
-        <a href="/<%=reviews[i].id%>/edit">edit post</a>
+        <form action="/<%=reviews[i].id%>/edit">
+          <input class="btn" type="submit" value="edit post">
+        </form>
       </div>
     <%}%>
   </body>

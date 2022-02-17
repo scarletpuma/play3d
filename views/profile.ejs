@@ -18,19 +18,39 @@
       </div>
       <div class="socials">
         <ul>
-          <li><a href="/"><i class="fa-brands fa-discord"></i></a></li>
-          <li><a href="/"><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href="/"><i class="fa-brands fa-facebook"></i></a></li>
-          <li><a href="/"><i class="fa-brands fa-twitch"></i></a></li>
-          <li><a href="/"><i class="fa-brands fa-discord"></i></a></li>
+          <li><a href="#" class="fa fa-facebook"></a></li>
+          <li><a href="#" class="fa fa-twitter"></a></li>
+          <li><a href="#" class="fa fa-instagram"></a></li>
+          <li><a href="#" class="fa fa-youtube"></a></li>
+          <li><a href="#" class="fa fa-twitch"></a></li>
         </ul>
       </div>
       <div class="favegames">
-        <ul>
-          <li><img src=""></li>
-          <li><img src=""></li>
-        </ul>
+        <div class="gamecontainer">
+          <% for(let i = 0; i < games.length; i++) { %>
+              <div class="gamecontainer">
+                <a href="/games/<%=games[i].id%>"><%=games[i].title%></a>
+                <img class="gridimg" src="<%=games[i].image%>">
+              </div>
+            <% } %>
+        </div>
       </div>
     </div>
+    <% for(let i = 0; i < reviews.length; i++) { %>
+      <div class="reviewpost">
+        <h1><%=reviews[i].videoGameObject%></h1>
+        <h3>by <%=reviews[i].author%></h3>
+        <p><%=reviews[i].rate%><span class="material-icons-outlined">star_rate</span></p>
+        <p><%=reviews[i].review%></p>
+        <div class="btns">
+          <form action="/games/<%=reviews[i].id; %>?_method=DELETE" method="POST">
+            <input class="btn" type="submit" value="delete post">
+          </form>
+          <form action="/<%=reviews[i].id%>/edit">
+            <input class="btn" type="submit" value="edit post">
+          </form>
+        </div>
+      </div>
+    <% } %>
   </body>
 </html>

@@ -111,10 +111,13 @@ app.delete(`/games/:id`, (req, res) => {
 });
 ////// ***profile*** //////
 app.get(`/profile`, (req, res) => {
-  Game.find({}, (err, allGames) => {
-    res.render(`profile.ejs`, {
-      games: allGames
-    });
+  Review.find({}, (err, allReviews) => {
+      Game.find({}, (err, allGames) => {
+          res.render(`profile.ejs`, {
+            games: allGames,
+            reviews: allReviews
+          });
+      });
   });
 });
 ////// ***listener*** //////

@@ -6,10 +6,10 @@
     <div class="griddiv">
     <% for(let i = 0; i < games.length; i++) { %>
         <div class="gamecontainer">
-        <a href="/games/<%=games[i].id%>"><%=games[i].title%></a>
-        <img class="gridimg" src="<%=games[i].image%>">
+          <a href="/games/<%=games[i].id%>"><%=games[i].title%></a>
+          <img class="gridimg" src="<%=games[i].image%>">
         </div>
-      <%}%>
+      <% } %>
     </div>
   </body>
 </html>

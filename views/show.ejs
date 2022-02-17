@@ -7,17 +7,17 @@
       <h1><a href="<%=game.buyLink%>"><%=game.title%></a></h1>
       <img class="gameimg"src="<%=game.image%>">
       <div class="gamedesc">
-        <%=game.description%>
+        <%= game.description %>
       </div>
-        <div class="gamedetails">
-          <ul>
-            <li>genre: <%=game.genre%></li>
-            <li>release date: <%=game.releaseDate%></li>
-            <li>developer: <%=game.developer%></li>
-            <li>MSRB rating: <%=game.msrbRating%></li>
-          </ul>
-          <p class="tags"><%=game.tags%></p>
-        </div>
+      <div class="gamedetails">
+        <ul>
+          <li>genre: <%=game.genre%></li>
+          <li>release date: <%=game.releaseDate%></li>
+          <li>developer: <%=game.developer%></li>
+          <li>MSRB rating: <%=game.msrbRating%></li>
+        </ul>
+        <p class="tags"><%=game.tags%></p>
       </div>
+    </div>
   </body>
 </html>

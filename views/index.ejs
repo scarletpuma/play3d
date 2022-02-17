@@ -4,22 +4,22 @@
   <%- include("partials/nav.ejs") %>
   <body>
     <div class="homefeed">
-    <% for(let i = 0; i < reviews.length; i++) { %>
-      <div class="reviewpost">
-        <h1><%=reviews[i].videoGameTitle%></h1>
-        <p><%=reviews[i].rate%><span class="material-icons-outlined">
-star_rate
-</span>s</p>
-        <p><%=reviews[i].review%></p>
-        <div class="btns"><form action="/games/<%=reviews[i].id; %>?_method=DELETE" method="POST">
-          <input class="btn" type="submit" value="delete post">
-        </form>
-        <form action="/<%=reviews[i].id%>/edit">
-          <input class="btn" type="submit" value="edit post">
-        </form>
-      </div>
-      </div>
-    <%}%>
-  </div>
+      <% for(let i = 0; i < reviews.length; i++) { %>
+        <div class="reviewpost">
+          <h1><%=reviews[i].videoGameTitle%></h1>
+          <h3>by <%=reviews[i].author%></h3>
+          <p><%=reviews[i].rate%><span class="material-icons-outlined">star_rate</span></p>
+          <p><%=reviews[i].review%></p>
+          <div class="btns">
+            <form action="/games/<%=reviews[i].id; %>?_method=DELETE" method="POST">
+              <input class="btn" type="submit" value="delete post">
+            </form>
+            <form action="/<%=reviews[i].id%>/edit">
+              <input class="btn" type="submit" value="edit post">
+            </form>
+          </div>
+        </div>
+      <% } %>
+    </div>
   </body>
 </html>

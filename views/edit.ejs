@@ -5,17 +5,18 @@
   <body>
     <div class="newpostform">
       <form action="/<%=review.id%>?_method=PUT" method="POST">
+        your name: <input type="text" name="author">
         <nav class="dropdownnav">
           <label for="touch">
-            <span class="droptitle">game title</span>
+            <span class="droptitle">game title<span class="material-icons-outlined">arrow_circle_down</span></span>
           </label>
           <input type="checkbox" id="touch">
-            <ul class="slide">
+            <ul class="gamelist">
               <% for(let i = 0; i < games.length; i++) { %>
                 <li class="gameTitle">
                   <input type="radio" name="videoGameTitle" value="<%=games[i].title%>"><%=games[i].title%>
                 </li>
-            <% } %>
+              <% } %>
             </ul>
         </nav>
         <div class="rate">
@@ -30,8 +31,10 @@
           <input type="radio" id="star1" name="rate" value="1" />
           <label for="star1" title="text">1 star</label>
         </div>
-        Your review: <textarea class="reviewinput" rows:"5" cols="33" name="review"></textarea>
-        <input type="submit" value="Post Review">
+        <div class="reviewbox">
+          Your review: <textarea class="reviewinput" rows:"5" cols="33" name="review"></textarea>
+          <input class="btn" type="submit" value="Post Review">
+        </div>
       </form>
     </div>
   </body>

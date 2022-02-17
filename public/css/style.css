@@ -25,7 +25,7 @@ body {
   transform: rotate(90deg);
 }
 #navtoggle:checked ~ .navbox {
-  left: 0 !important;
+  left: 0;
 }
 .navbtn {
   position: fixed;
@@ -159,94 +159,100 @@ body {
 .tags {
   color: #592e83;
 }
-/*DROPDOWN*/
-#dropdownnav {
-  width : 300px;
-  background: #d9d9d9;
-  margin : 40px auto;
-}
 
+/*DROPDOWN & POST PAGE*/
+.newpostform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  font-family: 'Questrial', sans-serif;
+  color: #5BC0BE;
+  border: 5px double #191718;
+  padding: 1em;
+  width: 80%;
+}
+.dropdownnav {
+  width: 200px;
+  margin: 40px auto;
+  text-transform: uppercase;
+}
+.reviewbox {
+  display: flex;
+  flex-direction: column;
+}
 .droptitle {
-  padding : 30px;
-  background : #2d2f31;
-  color : white;
-  font-size : 1.2em;
-  font-variant : small-caps;
-  cursor : pointer;
+  padding: 10px;
+  background: #191718;
+  font-size: 1em;
+  cursor: pointer;
   display: block;
+  color: #5BC0BE;
+  align-self: center;
 }
-
-.droptitle::after {
-  float: right;
-  right: 10%;
-  content: "+";
+.gameTitle {
+  color: #5BC0BE;
 }
-
-.slide {
-  clear:both;
-  width:100%;
-  height:0px;
+.gamelist {
+  clear: both;
+  width: 100%;
+  height: 0px;
   overflow: scroll;
-  text-align: center;
   transition: height .4s ease;
+  padding: 0;
 }
-
-.slide li {
-  padding : 30px;
+.gamelist li {
+  padding: 10px;
 }
-
 #touch {
   position: absolute;
   opacity: 0;
   height: 0px;
 }
-
-#touch:checked + .slide {
-  height: 300px;
+#touch:checked + .gamelist {
+  height: 200px;
 }
-
 .rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
+  float: left;
+  height: 46px;
+  padding: 0 10px;
 }
 .rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
+  position: absolute;
+  top: -9999px;
 }
 .rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
 }
 .rate:not(:checked) > label:before {
-    content: '★ ';
+  content: '★ ';
 }
 .rate > input:checked ~ label {
-    color: #ffc700;
+  color: #ffc700;
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-    color: #deb217;
+  color: #deb217;
 }
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
-    color: #c59b08;
-}
-.newpostform {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1em;
+  color: #c59b08;
 }
 
+/* INDEX */
+.homefeed {
+  display: flex;
+  flex-direction: column;
+}
 .reviewpost {
   display: flex;
   flex-direction: column;
@@ -262,61 +268,41 @@ body {
 .btns {
   margin: 1em;
 }
-.reviewpost h1 {
+.reviewpost h1, .reviewpost h3 {
   color: #ECA72C;
   font-family: 'Odibee Sans', cursive;
-  text-shadow: #474747 3px 5px 2px;
+  text-shadow: #592E83 3px 5px 2px;
 }
-/* CSS */
+.reviewpost h1 {
+  color: #ECA72C;
+}
+.reviewpost h3 {
+  color: #A90D45;
+}
 .btn {
   align-items: center;
-  background-color: initial;
+  font-family: 'Questrial', sans-serif;
   background-image: linear-gradient(#464d55, #25292e);
   border-radius: 8px;
   border-width: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
   flex-direction: column;
-  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-size: 10px;
   height: 30px;
   width: 50px;
   justify-content: center;
   line-height: 1;
-  margin: 0;
-  outline: none;
-  overflow: hidden;
+  margin: .5em;
   padding: 0 32px;
   text-align: center;
-  text-decoration: none;
-  transform: translate3d(0, 0, 0);
-  transition: all 150ms;
-  vertical-align: baseline;
-  white-space: nowrap;
 }
-
 .btn:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
-
-.btn:active {
-  outline: 0;
-}
-
-.btn:focus {
-  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
-}
-
-@media (max-width: 420px) {
-  .btn {
-    height: 48px;
-  }
-}
-.homefeed {
-  display: flex;
-  flex-direction: column;
+.btn:active{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }

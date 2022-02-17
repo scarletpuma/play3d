@@ -109,6 +109,13 @@ app.delete(`/games/:id`, (req, res) => {
     res.redirect(`/`)
   });
 });
-
+////// ***profile*** //////
+app.get(`/profile`, (req, res) => {
+  Game.find({}, (err, allGames) => {
+    res.render(`profile.ejs`, {
+      games: allGames
+    });
+  });
+});
 ////// ***listener*** //////
 app.listen(PORT, () => console.log( `Listening on port:`, PORT));

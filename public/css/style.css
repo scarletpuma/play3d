@@ -105,6 +105,7 @@ body {
   width: 90%;
   align-items: center;
   margin-left: 5em;
+  align-self: center;
 }
 .gamecontainer {
   display: flex;

@@ -120,6 +120,17 @@ app.get(`/profile`, (req, res) => {
       });
   });
 });
+////// ***edit*** //////
+app.get(`/edit`, (req, res) => {
+  Review.find({}, (err, allReviews) => {
+      Game.find({}, (err, allGames) => {
+          res.render(`edit.ejs`, {
+            games: allGames,
+            reviews: allReviews
+          });
+      });
+  });
+});
 ////// ***lists*** //////
 app.get(`/lists`, (req, res) => {
   Review.find({}, (err, allReviews) => {

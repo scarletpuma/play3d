@@ -371,6 +371,10 @@ body {
   display: inline;
   margin: .3em;
 }
+.posts {
+  display: flex;
+  flex-direction: column;
+}
 .favegamecontainer {
   display: flex;
   flex-direction: row;

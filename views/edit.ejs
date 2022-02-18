@@ -5,7 +5,7 @@
   <body>
     <div class="newpostform">
       <form action="/<%=review.id%>?_method=PUT" method="POST">
-        your name: <input type="text" name="author">
+        your name: <input type="text" name="author" value="<%=review.id.name%>">
         <nav class="dropdownnav">
           <label for="touch">
             <span class="droptitle">game title<span class="material-icons-outlined">arrow_circle_down</span></span>
@@ -32,7 +32,7 @@
           <label for="star1" title="text">1 star</label>
         </div>
         <div class="reviewbox">
-          Your review: <textarea class="reviewinput" rows:"5" cols="33" name="review"></textarea>
+          Your review: <textarea class="reviewinput" rows:"5" cols="33" name="review" value="<%=review.review%>"></textarea>
           <input class="btn" type="submit" value="Post Review">
         </div>
       </form>

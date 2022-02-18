@@ -385,6 +385,43 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* LISTS */
+.alllists {
+  display: flex;
+  flex-direction: column;
+}
+.listcontainer {
+  background-color: #191718;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-self: center;
+  padding: 1em;
+  margin: 2em;
+}
+.listcontainer img {
+  height: 150px;
+  width: 150px;
+  margin: 1em;
+}
+.listitem{
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+}
+.listcontainer h2 {
+  color: #ECA72C;
+  text-shadow: 0 1px 0px #A90D45, 1px 0 0px #D81159, 1px 2px 1px #A90D45, 2px 1px 1px #D81159, 2px 3px 2px #A90D45, 3px 2px 2px #D81159, 3px 4px 2px #A90D45, 4px 3px 3px #D81159, 4px 5px 3px #A90D45, 5px 4px 2px #D81159, 5px 6px 2px #A90D45, 6px 5px 2px #D81159, 6px 7px 1px #A90D45, 7px 6px 1px #D81159, 7px 8px 0px #A90D45, 8px 7px 0px #D81159;
+}
+.listitem h4{
+  font-family: 'Odibee Sans', cursive;
+  color: #ECA72C;
+}
+.listcontainer h3 {
+  color: #A90D45;
+  font-family: 'Odibee Sans', cursive;
+}
+
 @media only screen and (max-width: 800px) {
   .profilecontainer {
     flex-wrap: wrap;
@@ -402,9 +439,6 @@ body {
   }
   .gamedetails, .gamedesc, .gameinfo {
     font-size: 2em;
-
-  }
-  .showbody {
 
   }
 }

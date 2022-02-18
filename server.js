@@ -120,5 +120,16 @@ app.get(`/profile`, (req, res) => {
       });
   });
 });
+////// ***lists*** //////
+app.get(`/lists`, (req, res) => {
+  Review.find({}, (err, allReviews) => {
+      Game.find({}, (err, allGames) => {
+          res.render(`lists.ejs`, {
+            games: allGames,
+            reviews: allReviews
+          });
+      });
+  });
+});
 ////// ***listener*** //////
 app.listen(PORT, () => console.log( `Listening on port:`, PORT));

@@ -3,54 +3,59 @@
   <%- include("partials/head.ejs") %>
   <%- include("partials/nav.ejs") %>
   <body>
-    <div class="profileinfo">
-      <img class="pfp" src="https://pbs.twimg.com/media/FFzZmt4WYAIJD62?format=jpg&name=360x360">
-      <h1>edamnsel</h1>
-      <div class="usernames">
-        <ul>
-          <li><a href="/">Steam</a></li>
-          <li><a href="/">Epic</a></li>
-          <li><a href="/">tracker.gg</a></li>
-          <li>Switch Code: </li>
-          <li>Gamertag: </li>
-          <li>Riot Games: </li>
-        </ul>
-      </div>
-      <div class="socials">
-        <ul>
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-twitter"></a></li>
-          <li><a href="#" class="fa fa-instagram"></a></li>
-          <li><a href="#" class="fa fa-youtube"></a></li>
-          <li><a href="#" class="fa fa-twitch"></a></li>
-        </ul>
-      </div>
-      <div class="favegames">
-        <div class="gamecontainer">
-          <% for(let i = 0; i < games.length; i++) { %>
-              <div class="gamecontainer">
+    <div class="profilecontainer">
+      <div class="profileinfo">
+        <img class="pfp" src="https://pbs.twimg.com/media/FFzZmt4WYAIJD62?format=jpg&name=360x360">
+        <h1>edamnsel <span class="material-icons-outlined">
+person_add
+</span></h1>
+        <h3>currently playing: <span>lost ark</span></h3>
+        <h3>hours of games played: <span>1902838</span></h3>
+        <div class="usernames">
+          <ul>
+            <li><a href="/">Steam</a></li>
+            <li><a href="/">Epic</a></li>
+            <li><a href="/">tracker.gg</a></li>
+            <li>Switch Code: <span>SW-0000-0000-0000</span></li>
+            <li>Gamertag: <span>thescarletbelle</span></li>
+            <li>Riot Games: <span>HGS damnsel#baby</span></li>
+          </ul>
+        </div>
+        <div class="socials">
+          <ul>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-youtube"></a></li>
+            <li><a href="#" class="fa fa-twitch"></a></li>
+          </ul>
+        </div>
+        <h1> favorite games</h1>
+          <div class="favegamecontainer">
+            <% for(let i = 0; i < games.length; i++) { %>
                 <a href="/games/<%=games[i].id%>"><%=games[i].title%></a>
                 <img class="gridimg" src="<%=games[i].image%>">
-              </div>
-            <% } %>
-        </div>
+              <% } %>
+          </div>
       </div>
+      <% for(let i = 0; i < reviews.length; i++) { %>
+        <div class="profilereview">
+          <div class="reviewpost">
+            <h1><%=reviews[i].videoGameTitle%></h1>
+            <h3>by <%=reviews[i].author%></h3>
+            <p><%=reviews[i].rate%><span class="material-icons-outlined">star_rate</span></p>
+            <p><%=reviews[i].review%></p>
+            <div class="btns">
+              <form action="/games/<%=reviews[i].id; %>?_method=DELETE" method="POST">
+                <input class="btn" type="submit" value="delete post">
+              </form>
+              <form action="/<%=reviews[i].id%>/edit">
+                <input class="btn" type="submit" value="edit post">
+              </form>
+            </div>
+          </div>
+        <% } %>
+        </div>
     </div>
-    <% for(let i = 0; i < reviews.length; i++) { %>
-      <div class="reviewpost">
-        <h1><%=reviews[i].videoGameObject%></h1>
-        <h3>by <%=reviews[i].author%></h3>
-        <p><%=reviews[i].rate%><span class="material-icons-outlined">star_rate</span></p>
-        <p><%=reviews[i].review%></p>
-        <div class="btns">
-          <form action="/games/<%=reviews[i].id; %>?_method=DELETE" method="POST">
-            <input class="btn" type="submit" value="delete post">
-          </form>
-          <form action="/<%=reviews[i].id%>/edit">
-            <input class="btn" type="submit" value="edit post">
-          </form>
-        </div>
-      </div>
-    <% } %>
   </body>
 </html>

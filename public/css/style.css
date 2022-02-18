@@ -105,12 +105,13 @@ body {
   width: 90%;
   align-items: center;
   margin-left: 5em;
-  align-self: center;
+  align-content: center;
 }
 .gamecontainer {
   display: flex;
   flex-direction: column;
   margin: 2em;
+  margin-left: 4em;
   align-items: center;
   box-shadow: -10px 0px 13px -7px #592e83, 10px 0px 13px -7px #592e83, 5px 5px 15px 5px rgba(0,0,0,0);
 }
@@ -118,7 +119,13 @@ body {
   width: 200px;
   height: 200px;
 }
-
+.griddiv a {
+  font-family: 'Questrial', sans-serif;
+  color: #D81159;
+}
+.griddiv a:hover {
+  color: #592e83;
+}
 /*SHOW*/
 .showbody {
   text-align: center;
@@ -140,7 +147,7 @@ body {
   text-shadow: 4px 3px 0 #592e83;
   background-color: #191718;
   text-align: center;
-  font-size: 5em;
+  font-size: 2em;
 }
 .showbody h1 a:hover{
   color: #5BC0BE;
@@ -155,7 +162,7 @@ body {
 .gamedetails, .gamedesc{
   color: #5BC0BE;
   font-family: 'Questrial', sans-serif;
-  font-size: 3em;
+  font-size: 1.5em;
 }
 .tags {
   color: #592e83;
@@ -308,9 +315,96 @@ body {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 /* PROFILE */
-.socials a{
-  color: #eee;
+.profilecontainer {
+  display: flex;
+  flex-direction: column wrap;
+
+  width: 80%;
+  border: 1px solid #191718;
+  padding: 1em;
+  align-self: center;
+  margin: 0 auto;
+  align-content: center;
+  color: #5BC0BE;
 }
-.favegames {
+.usernames {
+  padding: .5em;
+  border: 1px solid #191718;
+  font-size: 15px;
+}
+.profilecontainer span {
+  color: #ECA72C;
+}
+.profilecontainer a {
+  font-family: 'Questrial', sans-serif;
+  color: #A90D45;
+  padding: .5em;
+}
+.profilecontainer a:hover{
+  color: #A90D45;
+  color: #ECA72C;
+}
+.profilecontainer h1,  .profilecontainer h3{
+  font-family: 'Odibee Sans', cursive;
+  text-align: center;
+  margin-top: 1em;
+}
+.profilecontainer h1 {
+  color: #ECA72C;
+  text-shadow: 0 1px 0px #A90D45, 1px 0 0px #D81159, 1px 2px 1px #A90D45, 2px 1px 1px #D81159, 2px 3px 2px #A90D45, 3px 2px 2px #D81159, 3px 4px 2px #A90D45, 4px 3px 3px #D81159, 4px 5px 3px #A90D45, 5px 4px 2px #D81159, 5px 6px 2px #A90D45, 6px 5px 2px #D81159, 6px 7px 1px #A90D45, 7px 6px 1px #D81159, 7px 8px 0px #A90D45, 8px 7px 0px #D81159;
+}
+.profilecontainer h3 {
+  font-size: 1.5em;
+  color: #A90D45;
+}
+.pfp {
+  width: 200px;
+  height: 200px;
+  margin-left: 4em;
+  border-top: 1px solid #191718;
+}
+.profileinfo {
+  border-top: 1px solid #191718;
+}
+.socials a, .socials li{
+  color: #eee;
+  display: inline;
+  margin: .3em;
+}
+.favegamecontainer {
+  display: flex;
+  flex-direction: row;
   overflow: scroll;
+  width: 300px;
+  align-items: center;
+  margin: .5em;
+  padding: .5em;
+  border: 1px solid #191718;
+}
+.profilereview {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 800px) {
+  .profilecontainer {
+    flex-wrap: wrap;
+  }
+  .profileinfo {
+    align-content: center;
+    margin: 0 auto;
+  }
+  .reviewpost {
+    display: flex;
+    font-size: 1.5em;
+  }
+  .showbody h1 a {
+    font-size: 3em;
+  }
+  .gamedetails, .gamedesc, .gameinfo {
+    font-size: 2em;
+
+  }
+  .showbody {
+
+  }
 }
